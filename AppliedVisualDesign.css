@@ -1,0 +1,104 @@
+/* Welcome to Applied Visual Design, in this section, we'll be going over basic
+tools developers use to create their own visual designs! */
+
+/* Text is a big part of a website, text will automatically be formatted to the
+left, let's change that by aligning text our text using the "text-align"
+property! */
+.justify {
+  text-align: justfiy;
+  /* Causes all lines except last to meet the left and right edges of the
+  line box */
+}
+.center {
+  text-align: center;
+  /* Centers the text */
+}
+.right {
+  text-align: right;
+  /* right-aligns the text */
+}
+.left {
+  text-align: left;
+  /* left-aligns the text and is default */
+}
+
+/* Now let's change the width of an element. We can use relative, absolute, and
+percentages (perecent of the parent element) values to give the width! Here is
+an exampele of making our image 25 pixels in width! */
+img {
+  width: 25px;
+}
+
+/* How about the height? We can use relative, absolute, and percentages just
+like for width. I want to make this image pretty tall so let's go with 100
+pixels! */
+img {
+  height: 100px;
+}
+
+/* Let's say I wanted to bold a text, in HTML it can be done by using the
+<strong> tag like this
+
+<p>This is <strong>Bolded</strong></p>
+
+This is helpful when you only want to bold one word but if it's a whole
+paragraph, here's a way to do that in CSS by using the font-weight property */
+p {
+  font-weight: bold;
+}
+
+/* Underlining text is kind of the similar mechanic with bold a text in HTML,
+it's done by using "<u>", here's how it's done
+
+<p>This is <u>underlined</u></p>
+
+If you wanted to underline a whole paragraph you would use the "text-decoration"
+like this! */
+p {
+  text-decoration: underline;
+}
+
+/* To italicize text we would be warraping the certain text with "<em>" in HTML
+like this!
+
+<p> This is <em>italicized</em></p>
+
+But this to do this on a whole element/paragraph you would do it in CSS which
+looks like this using the "font-style" property! */
+p {
+  font-style: italic;
+}
+
+/* What if we wanted to cross some text, we could do this by using the "<s>" in
+HTML like This
+
+<p> This is <s>striked-through</s></p>
+
+It's equivalent in CSS if you wanted to strike-through a paragraph or all of
+an element that has text, it would look like this using the text-decoration
+property! */
+p {
+  text-decoration: line-through;
+}
+
+/* In your text you may want to add a horizontal  line to seperate text like the
+heading and paragraphs, this is where the ""<hr>"" tag comes handy. It doesn't
+need a closingtag so it's okay just to put the "<hr>" tag whereever you want to
+ut it. This would be in HTML and it'll look like this in context
+
+<h1>Title</h1>
+<hr>
+<p>Paragraph</p>
+
+*/
+
+/* Let's adjust the background of an element with text, we want to still make
+text readable but we want to have a have a darkish color, the "rgba" value will
+help us with this, it's basically like the rgb value we covered in CSS basics
+but for this one you may notice there is an "a". That a signifies the alpha/level
+of opacity for the element. The range for alpha is 1 which is opaque to 0 which
+is fully transparent. Below is an example providing a dark color but almost
+transparent */
+p {
+  background-color: rgba(0, 0, 0, 0.1);
+}
