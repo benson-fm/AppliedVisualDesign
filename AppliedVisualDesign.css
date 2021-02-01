@@ -1,0 +1,953 @@
+/* Welcome to Applied Visual Design, in this section, we'll be going over basic
+tools developers use to create their own visual designs! */
+
+/* Text is a big part of a website, text will automatically be formatted to the
+left, let's change that by aligning text our text using the "text-align"
+property! */
+.justify {
+  text-align: justfiy;
+  /* Causes all lines except last to meet the left and right edges of the
+  line box */
+}
+.center {
+  text-align: center;
+  /* Centers the text */
+}
+.right {
+  text-align: right;
+  /* right-aligns the text */
+}
+.left {
+  text-align: left;
+  /* left-aligns the text and is default */
+}
+
+/* Now let's change the width of an element. We can use relative, absolute, and
+percentages (perecent of the parent element) values to give the width! Here is
+an exampele of making our image 25 pixels in width! */
+img {
+  width: 25px;
+}
+
+/* How about the height? We can use relative, absolute, and percentages just
+like for width. I want to make this image pretty tall so let's go with 100
+pixels! */
+img {
+  height: 100px;
+}
+
+/* Let's say I wanted to bold a text, in HTML it can be done by using the
+<strong> tag like this
+
+<p>This is <strong>Bolded</strong></p>
+
+This is helpful when you only want to bold one word but if it's a whole
+paragraph, here's a way to do that in CSS by using the font-weight property */
+p {
+  font-weight: bold;
+}
+
+/* Underlining text is kind of the similar mechanic with bold a text in HTML,
+it's done by using "<u>", here's how it's done
+
+<p>This is <u>underlined</u></p>
+
+If you wanted to underline a whole paragraph you would use the "text-decoration"
+like this! */
+p {
+  text-decoration: underline;
+}
+
+/* To italicize text we would be warraping the certain text with "<em>" in HTML
+like this!
+
+<p> This is <em>italicized</em></p>
+
+But this to do this on a whole element/paragraph you would do it in CSS which
+looks like this using the "font-style" property! */
+p {
+  font-style: italic;
+}
+
+/* What if we wanted to cross some text, we could do this by using the "<s>" in
+HTML like This
+
+<p> This is <s>striked-through</s></p>
+
+It's equivalent in CSS if you wanted to strike-through a paragraph or all of
+an element that has text, it would look like this using the text-decoration
+property! */
+p {
+  text-decoration: line-through;
+}
+
+/* In your text you may want to add a horizontal  line to seperate text like the
+heading and paragraphs, this is where the ""<hr>"" tag comes handy. It doesn't
+need a closingtag so it's okay just to put the "<hr>" tag whereever you want to
+ut it. This would be in HTML and it'll look like this in context
+
+<h1>Title</h1>
+<hr>
+<p>Paragraph</p>
+
+*/
+
+/* Let's adjust the background of an element with text, we want to still make
+text readable but we want to have a have a darkish color, the "rgba" value will
+help us with this, it's basically like the rgb value we covered in CSS basics
+but for this one you may notice there is an "a". That a signifies the alpha/level
+of opacity for the element. The range for alpha is 1 which is opaque to 0 which
+is fully transparent. Below is an example providing a dark color but almost
+transparent */
+p {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* We generally want the header tag to be a little bigger than the paragraph tag,
+this is so others can differentiate the size and and the heading tag can serve
+it's purpose, which is to standout providing the title of that paragraph/section,
+we can make sure this is true by using the "font-size" property, which will
+determine the font size. Let's change the font size of an "<h4>" tag to 24
+pixels */
+h4 {
+  font-size: 24px;
+}
+
+/* We can add a shadows to our elements! Thanks to the box-shadow property, we
+can do this. The box shadow property takes in multiple values which are
+
+offset-x (how far to push the shadow horizontally from from the element )
+offset-y (how far to push the shadow vertically from the element)
+blur-radius
+spread radius
+color
+
+It's in that order but it's also important to know that the blur-radius and the
+spread-radius are optional. By simply adding a comma, you can seperate different
+values allowing you to have more box shadows, below is an example of creating
+a box shadow */
+.box-shadow {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* The opacity of an element is determined by the "opacity" property which
+determines the transparecny of the element, this will apply to the whole element.
+
+Value = 1 (fully opaque no transparency)
+Value = 0.5 (half see-through)
+Value= 0 (completely transparent)
+
+Let's make the opacity of an element a little bit transparent but you can still
+see it */
+.box {
+  opacity: 0.7;
+}
+
+/* Let's make transform our text, the property "text-transform" is used to
+change the appearance of text, it's a convenient way to make sure text looks
+consistent. Here are the values you would put in and what they do, make sure
+to read the classes so you're not confused! */
+.lowercase {
+  text-transform: lowercase; /* Makes text lowercase */
+}
+.uppercase {
+  text-transform: uppercase; /* Makes text uppercase */
+}
+.capitalize {
+  text-transform: capitalize; /* Makes first letter of every word capitalized */
+}
+.inital {
+  text-transform: initial; /* Basically using the default value */
+}
+.inherit  {
+  text-transform: inherit; /* Use the text-transform value from the parent element */
+}
+.none {
+  text-transform: none; /* Use the default or the original text */
+}
+
+/* We want to make our headings consistent, let's provide them with a certain
+size so they can be consistent and be the right size! Read the classes so
+you can understand */
+h1 {
+  font-size: 68px;
+}
+h2 {
+  font-size: 52px;
+}
+h3 {
+  font-size: 40px;
+}
+h4 {
+  font-size: 32px;
+}
+h5 {
+  font-size: 21px;
+}
+h6 {
+  font-size: 14px;
+}
+
+/* Font-weight determines how thick or thin the characters are of a text. In This
+example, 800 is the thickest but 200 is the thinnest, look at the code in this
+website to have a better visualization of how they look,
+https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/set-the-font-weight-for-multiple-heading-elements
+*/
+h1 {
+  font-size: 68px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 52px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 40px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 32px;
+  font-weight: 400;
+}
+h5 {
+  font-size: 21px;
+  font-weight: 300;
+}
+h6 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* The "font-size" property in CSS is not limited to headings but also can be
+applied to any element that has text for example the "<p>" tag, let's change the
+font-size to 16 pixels! */
+p {
+  font-size: 16px;
+}
+
+/* The "line-height" property changes the height of each line in a block of text.
+It changes the amount of veritcal space that each line get's essentially so think
+about it as line spacing in a document, let's make the spacing 25 pixels. This is
+how it's done below! */
+p {
+  line-height: 25px;
+}
+
+/* Let's use pseudo-classes! A psuedo-class is a keyword that can be added to
+selectors, in order to select a specific state of the element. For example ":hover"
+When you hover your cursor over the element, what ever is listed in the cascade
+will occur, this is the code so that when you hover over an anchor tag it turns
+blue! */
+a:hover {
+  color: blue;
+}
+
+/* When it comes to HTML, CSS treats each element as it it's own seperate box
+which is known as the CSS blox model! Search it up on the internet to get a
+better refernece! Block level items start on a new line (headings, paragraphs,
+divs) while inline items sit within surrounding content (like images or spans)
+This is called the normal flow of a document but this can be overriden with CSS
+Setting the position of the element to relative allows you to specify how css
+should move it relative to its current position in normal flow but it will pair
+with the CSS offset properties of left or right, and top or bottom. These can be
+used in any value to move the item away from it's original position. By chaning
+the position to relative , it doesn't remove it from normal flow and other
+elements around it aren't affected by its position. Note that the HTML
+mark up should make sesne and when read from top to bottom which will help users
+with visual impairment access your content, below, we're going to move our
+header a few more pixels down from it's original position, check out this
+lesson for help https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-an-elements-relative-position */
+h2 {
+  poition: relative;
+  top: 20px;
+}
+
+/* It's important to know that when you're coding, top, left, right, or bottom,
+it doesn't mean you're moving the object in that direction but instead the
+opposite of it, take for example "left: 20px" this means that we're moving the
+time 20 pixels away from the left which means it's going right, and this applies
+to all of these offsets, look at the examples below and remember to read the
+classes to not get confused! */
+.moveup {
+  position: relative;
+  bottom: 10px; /* This means 10px away from the bottom, the item will go up */
+}
+.moveright {
+  position: relative;
+  left: 10px; /* This means 10px away from the left, the item will go right */
+}
+.movedown {
+  position: relative;
+  top: 10px; /* This means 10px away from the top, the item will go down */
+}
+.moveleft {
+  position: relative;
+  right: 10px; /* This means 10px away from the right, the item will go left */
+}
+
+/* There's another value for the position property which is absolute!. What This
+does is that it will lock the element in play relative to its parent container.
+This will remove the element from normal flow of the document so surrounding
+items will ignore it. The CSS offset properties which are top or bottom and left
+or right are used to adjust the position, Don't forget to add a position rule
+to the parent item (usually with poistion: relative;) or else the browser will
+keep looking up that chain nd ultimately default to the body tag! Use this HTML
+code as reference to help you better understand  with what I mean
+
+  <section>
+    <form id="searchbar">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search">
+      <input type="submit" name="submit" value="Go!">
+    </form>
+  </section>
+
+*/
+section {
+  position: relative;
+}
+#searchbar {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+/* Another value you can put for the position property is "fixed" which is a
+type of absolute potioning that locks an element relative to the browser window.
+It's used with the CSS offset properties (left or right, top or bottom) and it
+also removes the element from normal flow. Other items wouldn't realize where
+it's positioned which might require some layer adjustments. Another key difference
+is that when and element is at fixed position, it won't move when the user scrolls.
+Below is the code for fixed position, here's the link for the lesson https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/lock-an-element-to-the-browser-window-with-fixed-positioning
+*/
+.fixed {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+/* This positioning tool is called "float". Elements with the float property are
+removed from the normal flow of a document being pushed to either left or right
+of their containing parent element. It uses thr "width" property to specify
+how much horizonal space the floated element requires, below is the code!here's
+the link to the lesson! https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/push-elements-left-or-right-with-the-float-property
+*/
+#left {
+  float: left;
+  width: 40%;
+}
+
+/* Let's say we have elements overlapping eachother, a blue box is covering most
+of the red box but we want the opposite, the red box covering most of the blue
+box, well, this can done thanks to this property called the z-index. (FYI This
+happens when the element coming later in the HTML markup will, by default,
+appear on the top of the other element) The z-index uses integers and the higher
+value of the z-index for that element move it higher in the stack than the ones
+with lower values. Use the following HTML for reference and here's the link https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-the-position-of-overlapping-elements-with-the-z-index-property
+We're going to make the red box on top instead of the blue
+
+<div class="red-box"></div>
+<div class="blue-box"></div>
+
+*/
+.red-box {
+  background: #FF0000;
+  z-index: 2;
+}
+.blue-box {
+  background: #0000FF;
+  z-index: 1;
+}
+
+/* Let's center an element horizontally by using the margin property. We can do
+this by setting the value or margin to "auto". This method works for images as
+well, thought images are inline elements they can be changed to block elements
+when you set the <display> property to "block", below is the code to automatically
+center a image */
+img {
+  margin: auto;
+  display: block;
+}
+
+/* Color theory is a complex topic and we'll be going over the basics for these
+upcoming parts */
+
+/* When looking at a color wheel, it's helpful to visualize how colors relate to
+each other, the color wheel is a circle where similar hues (colors) are
+neighbors and different hues are further apart. Two colors opposite of each other
+on the wheel are called complementary colors. By combining these two colors they
+"cancel" each other out creating a gray caller though when placed side by side
+the colors appear vibrant and a produce a strong visual contrast. This is different
+than the original RYB model. Though it's important to take in to consideration
+that though using color can be powerful to add visual interest to a page, it
+shouldn't be used alone as the the only way to convey important information
+due to user with visual impairments  may not be able to understand the content
+
+Some examples of complementary colors with hex codes are :
+
+red (#FF0000) and cyan (#00FFFFF)
+
+green (#00FF00) and magenta (#FF00FF)
+
+blue (#0000FF) and yellow (#FFFF00)
+
+*/
+.half1 {
+  background-color: #FF0000;
+}
+.half2 {
+  background-color: #00FFFF;
+}
+
+/* Computer monitors use Red, Green, and Blue light. Red, Green, and Blue are
+primary colors. By mixing the primary colors you get the secondary colors which
+we went over previously here's a quick recap
+
+red (#FF0000) + blue (#0000FF) = magenta (#FF00FF)
+
+green (#00FF00) + blue (#0000FF) = cyan (#00FFFF)
+
+red (#FF0000) + green (#00FF00) = yellow (#FFFF00)
+
+These colors are also the complementary colors with their primary colors! Check
+the previous section to know more about complementary colors
+
+Teritiary colors are the result of combining a primary color with one of its
+secondary color neighbors. Let's take red (primary) and yellow (secondary) and
+combine them together! This would give us oragne (Teritiary). This would add
+six more colors to the simple color wheel make six total colors. Multiple methods
+out there exist in a harmonius combination in design with teritiary colors. One
+of them is called the split-complementary color scheme. You startn with a base
+color which then you pair it with the two colors that are adjacent to its
+complement, this will provide  a strong visual contrast and a more subtle than
+just using two complementary colors. below are three colors using the split
+-complement scheme:
+
+orange (#FF7F00)
+
+cyan (#00FFFF)
+
+rasberry (#FF007F)
+
+Check out the lesson out here! reecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-about-tertiary-colors
+
+You can see that the color scheme is really eyegrabbing! */
+.orange {
+  background-color: #FF7F00;
+}
+.cyan {
+  background-color: #00FFFF;
+}
+.rasberry {
+  background-color: #FF007F;
+}
+
+/* We can see from the previous sections that colors opposite from each other
+appear more vibrant when place side by side though having a strong visual
+contrast can be visual jarring if it's overused on the website and make it harder
+to read if the background it is a complementary-colored background. In practice,
+one of the colors is usually dominants and the complement is used to bring visual
+attention to certain content on the page! Refer here to get better visualization
+https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-color-of-various-elements-to-complementary-colors
+*/
+
+/* Colors have multiple characterisitics which include hue, saturation, and
+lightness. CSS3 introduces the "hsl()" property as a way to pick a color stating
+these characteristics
+
+Hue:
+Is basically the color, imagine a light spectrum with red on the left and
+blue on the right with green in the middle. Now imagine that as a circle. Hue
+uses the color wheel concept where the angle of the color on the circle is given
+as a value between 0 and 360.
+
+Saturation:
+Bascially the amount of gray in a color. A fully saturated color has no gray in
+it but a color with minial saturation is almost completely gray. This is seen
+with percentages with 100% being fully saturated.
+
+Lightness:
+This is the amount of white or vlack in a color. A percentage is used with
+0% being complete black and and 100% being completely white. 50% is normal color.
+
+Below are some examples of HSL colors!
+*/
+.red {
+  color: hsl(0, 100%, 50%);
+}
+.yellow {
+  color: hsl(60, 100%, 50%);
+}
+.green {
+  color: hsl(120, 100%, 50%);
+}
+.cyan {
+  color: hsl(180, 100%, 50%);
+}
+.blue {
+  color: hsl(240, 100%, 50%);
+}
+.magenta {
+  color: hsl(300, 100%, 50%);
+}
+
+/* By using "hsl()", it makes it easier to adjust the tone of a color. Mixing
+"white" with a pure color makes a tint of it and adding black will make a shade
+of it. This is what lightness determines. But saturation which is basically
+adding "gray" can also help produce a tone of the color. This would be helpful When
+you have a hase hue you like, but you need different variations of it */
+.cyan {
+  background-color: hsl(180, 90%, 35%);
+}
+.shade-of-cyan {
+  background-color: hsl(180, 80%, 25%);
+}
+
+/* Applying color to HTML doesn't have to be just one flat hue. CSS allows for
+color transitions which are known as gradients, on elements. This done with the
+background property's "linear-gradient", below is the syntax on how it would
+look like
+
+background: liner-gradient(gradient_direction, color 1, color 2, color 3...)
+
+gradient_direction refers to what angle it'll make a linear gradient, "90deg"
+will make a horizontal gradient while 45deg will give you a diagnol gradient
+
+below is an example of code of linear gradient */
+.lineargradient {
+  background: linear-gradient(45deg, #CCFFFF, #FFCCCC, #FFFFDD)
+}
+
+/* Now let's use the "repeating-linear-gradient()" which essentially repeats the
+the specified gradient pattern. It works wih a variety of values however just for
+simplicity, let's use angle and color stop values. The angle tells us the
+direction of the pattern. Color stops are the width values that mark where a
+transition takes place. These are down usually by percentages or pixels.
+
+let's analyze the following code
+*/
+.repeating {
+  background: repeating-linear-gradient(90deg, yellow 0px, blue 40px, green 40px,
+    red 90px);
+}
+/* Yellow would start at 0 pixels which will then blend into blue at 40 pixels.
+With the next color stop also being at 40px the gradient immediately changes, so
+right at 40px we'll see blue and green have no transition. Then not until 90
+pixels we see that transition from green to red. These pixels determine how
+far it is from the beginning. If every two color stop values are the same color.
+The blending will not be noticeable because it's between the same color with a
+hard transition to the next color. This will end up in stripes, below is an
+example and for some hands on playing around with this type of code check the
+link below!
+https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element
+*/
+
+/* Let's make our background of our website more interesting by adding a subtle
+pattern to it. You don't want to make your background stand out too much where
+the attention of your website is focused on the background instead of the
+material. Find balance. "The background" property suports the "url()" function.
+So you can make your background out of the image's link address. Below is an
+example */
+body {
+  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+}
+
+/* We can change the scale of our elements by using the "transform" property
+along with usng the "scale()"" function. That number inside the parentheses will
+determine how to scale it! */
+.box {
+  transform: scale(2); /* This will make the box 2x bigger */
+}
+
+/* By using the pseudo class in correlation with the transform element, it can
+easily add interactivity to your elements! */
+.box:hover {
+  transform: scale(1.1);
+  /* When you hover over the element, it will increase
+  in size by 1.1! */
+}
+
+/* Another function you can use for the transform property is the "skewX()"
+function which skews the selected element along its x-axis (horizontal) by a
+certain degree. */
+.redbox {
+  background-color: red;
+  transform: skewX(24deg);
+  /* This skews the red box by 24 degrees horizontally */
+}
+
+/* The counterpart of the "skewX()" function is "skewY()" which skews the
+element along the y-axis (vertical) by a certain degree */
+.bluebox {
+  background-color: blue;
+  transform: skewY(-10deg);
+}
+
+/* We can makes graphics using CSS! By manipulating different selectors and
+properties, you can make interesting shapes! Let's make a crescent moon. You
+would need to work with the box-shadow property and also the border-radius
+property. */
+
+.crescentmoon {
+  background-color: transparent; /* This in the sense the element we're making
+  the crescent out of the shadow of it */
+  border-radius: 50%; /* 50% is need to make an element circular */
+  box-shadow: 25px 10px 0 0 blue;  /* This is crescent */
+}
+
+/* How about making a more complex shape like a heart! Before we do this, let's
+learn about the pseudo classes "::before" and "::after". These pseudo-elements
+are used to add something before or after a selected element. To have these
+psuedo elements function property. They must have a defined content property.
+This property is mostly used to  add things like a photo or text to the selected
+element. Though even when making shapes it's still required but set to an empty
+string. Below is how to make it! */
+.heart {
+  position: absolute; /* makes the position stay put */
+  margin: auto; /* centers the shape */
+  top: 0; /* far from top */
+  right: 0; /* far from right */
+  bottom: 0; /* far from bottom */
+  left: 0; /* far from left */
+  transform: rotate(-45deg); /* rotate the shape by 45 deg */
+  background-color: pink; /* color of the shape */
+  height: 50px; /* height of the shape */
+  width: 50px; /* width of the shape */
+}
+.heart::after{
+  background-color: pink; /* color of the circular part of the heart */
+  content: ""; /* required for the pseudo */
+  border-radius: 50%; /* needed to make it round */
+  position: absolute; /* same position as the heart */
+  width: 50px; /* width of the shape */
+  height: 50px; /* height of the shape */
+  top: 0px; /* far from top */
+  left: 25px; /* far from left */
+}
+.heart::before {
+  content: ""; /* required for the pseudo */
+  background-color: pink; /* color of the other circular part of the heart */
+  border-radius: 50%; /* needed to make it round */
+  position: absolute; /* same position as heart */
+  width: 50px; /* width of the shape */
+  height: 50px; /* height of the shape */
+  top: -25px; /* far from top */
+  left: 0px; /* far from left */
+}
+
+/* here's the link for the lesson!https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-more-complex-shape-using-css-and-html */
+
+/* Let's animate an element. There are animation properties that control how the
+animation should behave and the "@keyframes" rule controls what happens during
+that animation. There are 8 total of these properties but we'll just go over
+animation-name which set the name of the animation in which the rule "@keyframes"
+will use to tell CSS which rules go with which animations and animation duratiom
+setting the length time for the animation. "@keyframes" is used to specify what
+occurs with the animation over a duration. This is with percentages ranging for
+0% (Imagine as this is what the element would look like in the beginning) to 100%.
+(imagine this as being what the element would like like at the end). Below is an
+example and also you can set these values between 0% and 100%! */
+
+#animation {
+  animation-name: red-blue; /* @keyframes will use this to identify */
+  animation-duration: 5s; /*  It will last 5 seconds */
+}
+
+@keyframes red-blue {
+  0% {
+    background-color: red;
+  }
+  /* In the beginning it's red */
+  100% {
+    background-color: blue;
+  }
+  /* In the end it's blue */
+}
+
+/* Let's change the color of button when we put our cursor over it! We can use
+@keyframes to help us with this. Also ms stands for milliseconds where 1000 ms
+is eqaul to 1s (second) */
+ button {
+   border-radius: 5px;
+   color: white; /* words of button */
+   background-color: #0F5897; /* color of button when cursor is not on top of it */
+   padding: 5px 10px 8px 10px; /* size of button */
+ }
+
+ button:hover {
+   animation-name: background-color;
+   animation-duration: 500ms;
+ }
+
+ @keyframes background-color {
+   100% {
+     background-color: #4791d0; /* will turn into this color */
+   }
+ }
+
+ /* If you didn't realize, when you hovered over the cursor over the button, it
+ only stayed like that for a few moments until it reset back to the original
+ color, we don't want this. Let's fix that by adding the property
+ "animation-fill-mode" to the value of "forwards". This property specifies the
+ style applied to an element when the animation has finished */
+ button:hover {
+   animation-name: background-color;
+   animation-duration: 500ms;
+   animation-fill-mode: forwards; /* This will cause the button to stay highlighted */
+ }
+
+ /* Let's create movement with out CSS animations! Elements with having specified
+ positions like fixed or relative us the CSS offset properties (right, left, top
+ bottom). These offset properties can be used to create movement! Below is the
+ code to make a box move from left to right continuosly! */
+.box {
+  animation-name: box;
+  animation-duration: 2s;
+  background-color: black;
+  width: 70%;
+  height: 40px;
+  margin: 50px auto;
+  position: relative;
+}
+
+@keyframes box {
+  0% {
+    background-color: pink;
+    right: 0px;
+  }
+  }
+  50% {
+    background-color: cyan;
+    right: 0px;
+  }
+  }
+  100% {
+    background-color: pink;
+    left: 0px;
+  }
+}
+
+/* Let's change tha opacity of an element as it moves! This is where it'll
+gradually fade as it reaches one side. */
+#ball {
+  width: 50px;
+  height: 50px;
+  margin: 30px auto;
+  position: fixed;
+  left: 20%;
+  border-radius: 50%;
+  background: liner-gradient(35deg, #CCFFFF, #FFCCCC);
+  animation-name: fade;
+  animation-duration: 3s;
+}
+@keyframes fade {
+  50% {
+    left: 60%;
+    opacity: 0.1; /* by 50%, it'll have an opacity of 0.1 */
+  }
+}
+
+/* Another animation property is the animation-iteration-count, which controls
+the amount of times you would want to loop the animation. */
+#ball {
+  width: 50px;
+  height: 50px;
+  margin: 30px auto;
+  position: fixed;
+  left: 20%;
+  border-radius: 50%;
+  background: liner-gradient(35deg, #CCFFFF, #FFCCCC);
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; /* This will make the loop infinite */
+}
+@keyframes fade {
+  50% {
+    left: 60%;
+    opacity: 0.1;
+  }
+}
+
+/* Let's make a CSS Heartbeat! Below is the code with all of the things we've
+done and covered! */
+.back { /* This is the background behind the heart */
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation-name: backdiv;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.heart { /* This is the CSS for the base of the heart */
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.heart:after { /* This is the CSS for one of the sides of the hearts */
+  background-color: pink
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+
+.heart:before { /* This is the CSS for one of the sides of the hearts */
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+
+/* This is the animation for the background */
+@keyframes backdiv {
+ backdiv {
+  50% {
+    background: #FFE6F2
+  }
+}
+
+/* This is the animation for the heart */
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(-45deg);
+  }
+}
+
+/* We can actually change the animation rates of similarly animated elementss!
+We've only done this so by applying the "animation-iteration-count". However
+instead we can change some of the "@keyframes" rules by having the commands go
+at a different percentage. This will make the go at different rates. Here is the
+lesson! https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/animate-elements-at-variable-rates
+and below is an example in regards to @keyframes  */
+@keyframes a {
+  20% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes b {
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+
+/* Another way we can do this instead of changing the @keyframs rules is by
+changing the animation duration of the class/id ! By setting these at different
+times, we'll be able to see that the elements are "animating" at different rates!
+*/
+.class1 {
+  animation-duration: 1s;
+}
+
+.class2 {
+  animation-duration: 1.1s;
+}
+
+.class3 {
+  animation-duration: 0.9s;
+}
+
+/* Let's talk about another property! animation-timing-function is a property
+that controls how quickly an animated element changes over the duration of the
+animation. An example would be a car moving from point A to B in a given time
+(this is animation-duration) and the anumation-timing-function is how the car
+accelerates and decelerates over the course of the drive. Some values are
+
+ease - starts slow, speeds up in the middle, and then slows down again in the
+       end.
+
+ease-out - quick in the beginning but then slows down
+
+ease-in - slow in the beginning then speeds up at the end
+
+linear - a constant animation speed throughout
+
+here is the link for the lesson to get a better sense of how it works
+https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/change-animation-timing-with-keywords
+*/
+.class1 {
+  animation-timing-function: linear;
+}
+
+.class2 {
+  animation-timing-function: ease-out;
+}
+
+/* We have an even finer contro over how the animation plays out, through the use
+of Bezier curves. Bezier curves are used with the cubic-bezier function. This curve
+lives on a 1 by 1 coordinate system where x is the duration of the animation
+(time scale) and the Y-axis is the change in the animation. The cubic bezier
+function consists of four and main points that sit on this 1 by 1 grid: p0, p1,
+p2, and p3. p0 and p3 are sets for you that are the end points with (0,0) and
+(1,1). You use the p1 and p2 values to dicatates the shape of the curve for the
+animation to follow. This animation is also a linear change of an element during
+the length of an animation Below is an example
+
+cubic-bezier(x1,y1,x2,y2)
+
+*/
+
+.element {
+  left: 27%;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* In a previous lesson we talked about ease-out which describes an animation
+change that speeds up first and then slows down at the end of the animation. We
+can actually achieve this by using the bezier curve function. Changing the p1 and
+p2 anchor points driver the creation of different Bezier curves. For review,
+p0 starts at (0,0) and ends with p3 at (1,1). The relationship between the change
+in x and y values reverses - in this example the y value moves from 1 to 1 (no changes)
+and the x values move from 0.58 to 1. This makes the animationchanges progress
+slower compared to the animation duration */
+
+.element {
+  animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+
+/*  When using the animation-timing-function, it automatically loops at every
+keyframe, when the animation-iteration-count is set to infinite. When we want to
+make a bezier curve look more realistic for example let's say were juggling
+balls, we can actually make the y2 value larger than 1. So even though the
+cubic bezier curve is mapped on a 1 by 1 coordinate system, and it can only
+accept x values from 0 to 1, the y values can be set to numbers larger than one,
+This results in a bouncing movement that is ideal for simulating a juggling ball
+for example. */
+
+.jugglingball {
+  animation-timing-function: cubic-bezier(0.3, 0.4, 0.5, 1.6); /* This makes it
+  more fluid */
+}
+
+/* And that's the end for Applied Visual Design! All of these lessons can be
+found on the website https://www.freecodecamp.org/learn where you can access
+other lessons as well, stay tuned for the next tutorials/libraries! */
